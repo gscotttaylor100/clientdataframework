@@ -1,0 +1,69 @@
+#Set env
+variable "env" {
+  type    = string
+  default = "dev"
+}
+
+#Databrciks Secret Scope Name
+variable "dbwscope" {
+  type    = string
+  default = "azkvdbwscope"
+}
+
+#Databrciks Secret name
+variable "secretsname" {
+  type = map(any)
+  default = {
+    "databricksappsecret"   = "databricksappsecret"
+    "databricksappclientid" = "databricksappclientid"
+    "tenantid"              = "tenantid"
+  }
+}
+
+variable "service_principal" {
+  default = "AzureDatabricksSPN"
+  type    = string
+}
+
+#Existing Azure Resource group to use
+variable "resource_group_name" {
+  default = "gst_x_001"
+  type    = string
+}
+
+#Azure Storage Account Name
+variable "storage_account_name" {
+  type    = string
+  default = "stacdata"
+}
+
+#Azure Storage container Name - bronze
+variable "bronze_storage_container" {
+  type    = string
+  default = "bronze"
+}
+
+#Azure Storage container Name - silver
+variable "silver_storage_container" {
+  type    = string
+  default = "silver"
+}
+
+#Azure Storage container Name - gold
+variable "gold_storage_container" {
+  type    = string
+  default = "gold"
+}
+
+
+# Current project Company Name
+variable "company" {
+  default = "insight"
+  type    = string
+}
+
+#Azure Location to install to 
+variable "location" {
+  default = "East US 2"
+  type    = string
+}
