@@ -4,8 +4,6 @@ data "azurerm_subscription" "primary" {}
 
 
 
-
-
 data "azurerm_resource_group" "rgdata01" {
   name = "gst_x_001"
 }
