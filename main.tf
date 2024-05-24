@@ -2,7 +2,7 @@ data "azurerm_client_config" "current" {}
 data "azuread_client_config" "current" {}
 data "azurerm_subscription" "primary" {}
 
-
+#test
 
 data "azurerm_resource_group" "rgdata01" {
   name = "gst_x_001"
